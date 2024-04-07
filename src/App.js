@@ -8,7 +8,7 @@ function App() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const submitHandler = (e) => {
     e.preventDefault();
-    if (fName && lName) {
+    if (fNameRef.current.value && lNameRef.current.value) {
       setFName(fNameRef.current.value);
       setLName(lNameRef.current.value);
       setIsSubmitted(true);
