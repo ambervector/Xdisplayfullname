@@ -16,18 +16,21 @@ function App() {
   return (
     <div>
       <h1>Full Name Display</h1>
-      <form
-        onSubmit={(e) => {
-          submitHandler(e);
-        }}
-      >
+      <form>
         <label for="fname">First name:</label>
         <input ref={fNameRef} type="text" id="fname" name="fname" required />
         <br />
         <label for="lname">Last name:</label>
         <input ref={lNameRef} type="text" id="lname" name="lname" required />
         <br />
-        <button type="submit">Submit</button>
+        <button
+          onClick={(e) => {
+            submitHandler(e);
+          }}
+          type="submit"
+        >
+          Submit
+        </button>
         {isSubmitted && <p>Full Name: John Wick</p>}
       </form>
     </div>
