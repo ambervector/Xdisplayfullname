@@ -31,7 +31,7 @@ function App() {
         >
           Submit
         </button>
-        {isSubmitted && <p>Full Name: John Wick</p>}
+        {isSubmitted && <p>Full Name: {`${fName} ${lName}`}</p>}
       </form>
     </div>
   );
