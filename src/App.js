@@ -8,9 +8,9 @@ function App() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const submitHandler = (e) => {
     e.preventDefault();
+    setIsSubmitted(true);
     setFName(fNameRef.current.value);
     setLName(lNameRef.current.value);
-    setIsSubmitted(true);
   };
 
   return (
@@ -31,8 +31,8 @@ function App() {
         >
           Submit
         </button>
-        {isSubmitted && <p>Full Name: {`${fName} ${lName}`}</p>}
       </form>
+      {isSubmitted && <p>Full Name: {`${fName} ${lName}`}</p>}
     </div>
   );
 }
