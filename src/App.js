@@ -8,9 +8,13 @@ function App() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const submitHandler = (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    setFName(fNameRef.current.value);
-    setLName(lNameRef.current.value);
+    if (fName && lName) {
+      setFName(fNameRef.current.value);
+      setLName(lNameRef.current.value);
+      setIsSubmitted(true);
+    } else {
+      return;
+    }
   };
 
   return (
